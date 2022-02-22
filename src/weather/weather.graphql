@@ -1,0 +1,14 @@
+input WeatherForecastInput {
+  lat: number!
+  lon: Number!
+  date: Date # if not entered will use current date
+}
+
+type WeatherForecastResponse {
+  temp: Number!
+}
+
+type Query {
+  weather(input: WeatherForecastInput!): Number
+}
+
