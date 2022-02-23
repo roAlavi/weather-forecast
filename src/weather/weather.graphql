@@ -7,10 +7,10 @@ input WeatherForecastInput {
 }
 
 type WeatherForecastOutput {
-  temp: Float!
+  description: String!
 }
 
 type Query {
-  weather(input: WeatherForecastInput!): WeatherForecastOutput!
+  weather(input: WeatherForecastInput!): WeatherForecastOutput
 }
 

@@ -1,4 +1,4 @@
-import { Query, Resolver } from '@nestjs/graphql';
+import { Args, Query, Resolver } from '@nestjs/graphql';
 import { WeatherForecastInput, WeatherForecastOutput } from '../graphql.schema';
 import { WeatherService } from './weather.service';
 
@@ -6,13 +6,8 @@ import { WeatherService } from './weather.service';
 export class WeatherResolver {
   constructor(private readonly weatherService: WeatherService) {}
 
-  @Query('weather')
-  async weather(input: WeatherForecastInput): Promise<WeatherForecastOutput> {
-    const myPromise = new Promise<WeatherForecastOutput>((resolve, reject) => {
-      setTimeout(() => {
-        resolve(this.weatherService.getTempByLocation(input.lat, input.lon, input.date));
-      }, 300);
-    });
+  @Query(returns => WeatherForecastOutput)
+  async weather(@Args('input') input: WeatherForecastInput): Promise<WeatherForecastOutput> {
     return this.weatherService.getTempByLocation(input.lat, input.lon, input.date);
   }
 }

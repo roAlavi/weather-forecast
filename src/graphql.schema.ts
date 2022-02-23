@@ -14,11 +14,11 @@ export class WeatherForecastInput {
 }
 
 export class WeatherForecastOutput {
-    temp: number;
+    description: string;
 }
 
 export abstract class IQuery {
-    abstract weather(input: WeatherForecastInput): WeatherForecastOutput | Promise<WeatherForecastOutput>;
+    abstract weather(input: WeatherForecastInput): Nullable<WeatherForecastOutput> | Promise<Nullable<WeatherForecastOutput>>;
 }
 
 type Nullable<T> = T | null;
