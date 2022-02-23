@@ -1,0 +1,16 @@
+scalar Date
+
+input WeatherForecastInput {
+  lat: Float!
+  lon: Float!
+  date: Date # if not entered will use current date
+}
+
+type WeatherForecastOutput {
+  description: String!
+}
+
+type Query {
+  weather(input: WeatherForecastInput!): WeatherForecastOutput
+}
+
