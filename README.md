@@ -9,9 +9,13 @@ This is a basic implementation using Apollo graphql server and NestJS to request
 
 ### Running the server
 
-**FOR PRODUCTION** `npm start`
-**FOR DEV - WATCH MODE** `npm run start:dev`
+<br>
+**FOR PRODUCTION** `npm start` 
+<br><br>
+**FOR DEV - WATCH MODE** `npm run start:dev` 
+<br><br>
 **FOR DEV MODE WITH DEBUG HEALTH CHECK** `npm run start:debug`
+<br><br>
 
 ### Graphql Playground
 
