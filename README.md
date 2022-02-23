@@ -15,18 +15,32 @@ and then to use `.env.example` file as a ENV file you can run this <br>
 there should be a free subscription api-key which can be used to bring up the server.
 ### Running the server
 
+To run the server in different modes you can use these commmands.
+<br><br>
+
+**FOR DEV - WATCH MODE**
+
+```sh
+npm run start:dev
+```
 <br>
-**FOR PRODUCTION** `npm start` 
-<br><br>
-**FOR DEV - WATCH MODE** `npm run start:dev` 
-<br><br>
-**FOR DEV MODE WITH DEBUG HEALTH CHECK** `npm run start:debug`
-<br><br>
+
+**FOR DEV MODE WITH DEBUG HEALTH CHECK**
+```
+npm run start:debug
+```
+<br>
 
 ### Tests
 
 <br>
-**TO RUN TESTS** `npm run test`<br><br>
+
+**TO RUN TESTS**
+
+```
+npm run test
+```
+<br>
 ### Graphql Playground
 
 When the application is running, you can go to [http://localhost:3000/graphql](http://localhost:3000/graphql) to access the GraphQL Playground.  See [here](https://docs.nestjs.com/graphql/quick-start#playground) for more.
