@@ -46,3 +46,27 @@ npm run test
 ### Graphql Playground
 
 When the application is running, you can go to [http://localhost:3000/graphql](http://localhost:3000/graphql) to access the GraphQL Playground.  See [here](https://docs.nestjs.com/graphql/quick-start#playground) for more.
+
+you can paste this as query:
+```gql
+query weather($input: WeatherForecastInput!) {
+  weather(input:$input){
+    description
+  }
+}
+```
+
+and this can be used to pass input data:
+```JSON
+{
+  "input": {
+    "lat": 55,
+    "lon": -0.12,
+    "date": "2022-03-11"
+  }
+}
+```
+
+this is how the playground will look like:
+
+![Playground](https://github.com/roAlavi/weather-forecast/blob/main/playground.png)
