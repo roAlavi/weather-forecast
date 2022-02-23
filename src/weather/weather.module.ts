@@ -1,8 +1,11 @@
 import { Module } from '@nestjs/common';
-import { OwnersService } from './weather.service';
+import { WeatherResolver } from './weather.resolver';
+import { WeatherService } from './weather.service';
 
 @Module({
-  providers: [OwnersService],
-  exports: [OwnersService],
+  imports: [],
+  providers: [WeatherService, WeatherResolver],
 })
-export class OwnersModule {}
+export class WeatherModule {}
+
+

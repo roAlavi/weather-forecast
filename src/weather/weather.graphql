@@ -1,14 +1,16 @@
+scalar Date
+
 input WeatherForecastInput {
-  lat: number!
-  lon: Number!
+  lat: Float!
+  lon: Float!
   date: Date # if not entered will use current date
 }
 
-type WeatherForecastResponse {
-  temp: Number!
+type WeatherForecastOutput {
+  temp: Float!
 }
 
 type Query {
-  weather(input: WeatherForecastInput!): Number
+  weather(input: WeatherForecastInput!): WeatherForecastOutput!
 }
 

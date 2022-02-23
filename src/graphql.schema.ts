@@ -7,37 +7,18 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export class CreateCatInput {
-    name?: Nullable<string>;
-    age?: Nullable<number>;
+export class WeatherForecastInput {
+    lat: number;
+    lon: number;
+    date?: Nullable<Date>;
+}
+
+export class WeatherForecastOutput {
+    temp: number;
 }
 
 export abstract class IQuery {
-    abstract cats(): Nullable<Nullable<Cat>[]> | Promise<Nullable<Nullable<Cat>[]>>;
-
-    abstract cat(id: string): Nullable<Cat> | Promise<Nullable<Cat>>;
-}
-
-export abstract class IMutation {
-    abstract createCat(createCatInput?: Nullable<CreateCatInput>): Nullable<Cat> | Promise<Nullable<Cat>>;
-}
-
-export abstract class ISubscription {
-    abstract catCreated(): Nullable<Cat> | Promise<Nullable<Cat>>;
-}
-
-export class Owner {
-    id: number;
-    name: string;
-    age?: Nullable<number>;
-    cats?: Nullable<Cat[]>;
-}
-
-export class Cat {
-    id?: Nullable<number>;
-    name?: Nullable<string>;
-    age?: Nullable<number>;
-    owner?: Nullable<Owner>;
+    abstract weather(input: WeatherForecastInput): WeatherForecastOutput | Promise<WeatherForecastOutput>;
 }
 
 type Nullable<T> = T | null;
