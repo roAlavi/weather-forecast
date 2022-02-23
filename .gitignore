@@ -22,3 +22,6 @@ npm-debug.log
 
 # MacOS system files
 .DS_Store
+
+# Should not commit env file
+.env
