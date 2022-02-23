@@ -3,16 +3,16 @@ import {
   ApolloServerPlugin,
   GraphQLRequestListener,
 } from 'apollo-server-plugin-base';
-import * as debug from 'debug';
+import debug from 'debug';
 
-const logger = debug('logs');
+const logger = debug('weather:logs');
 @Plugin()
 export class LoggingPlugin implements ApolloServerPlugin {
   async requestDidStart(): Promise<GraphQLRequestListener> {
-    logger.log('Received request')
+    logger('Received request')
     return {
       async willSendResponse() {
-        logger.log('Will send response');
+        logger('Will send response');
       },
     };
   }
