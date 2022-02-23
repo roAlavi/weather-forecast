@@ -1,3 +1,9 @@
+/**
+ * @fileoverview
+ * This is a simple http client to make sure we only create single instance
+ * of Axios client to avoid opening multiple connections
+ */
+
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 
 enum StatusCode {
