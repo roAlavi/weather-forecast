@@ -1,7 +1,8 @@
 /**
  * @fileoverview
  * This is a simple http client to make sure we only create single instance
- * of Axios client to avoid opening multiple connections
+ * of Axios client to avoid opening multiple connections, also we can customise
+ * the way we handle http errors for different status codes
  */
 
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
