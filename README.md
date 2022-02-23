@@ -2,7 +2,7 @@
 
 This is a basic implementation using Apollo graphql server and NestJS to request weather forecast within next 16 days.
 
-**Note: unfortunately the 16 days forecast is not available for free subscription so I was only able to wrtie the boilerplate and the response schema for hourly forecast which is available for free subscriptions so if you pass the right env variable for `apikey` you should be able to test the code. Also the business logic to check if the date is in 16 days range is in place and worked and tested as expected**
+**Note: unfortunately the 16 days forecast is not available for free subscription so I was only able to write the boilerplate and the response schema for hourly forecast which is available for free subscriptions so if you pass the right env variable for `apikey` you should be able to test the code. Also the business logic to check if the date is in 16 days range is in place and worked and tested as expected**
 
 More info can be find here:
 ![The subscription info page](https://github.com/roAlavi/weather-forecast/blob/main/subscriptions-issue.png)
