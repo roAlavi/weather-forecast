@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { WeatherForecastOutput } from '../graphql.schema';
 import { openWeatherProvider } from '../provider/openweather';
-import constants from './weather.constants';
 
-const { minLatittude, maxLatittude, minLongitude, maxLongitude } = constants;
 @Injectable()
 export class WeatherService {
   async getTempByLocation(lat: number, lon: number): Promise<WeatherForecastOutput> {
